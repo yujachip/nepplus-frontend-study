@@ -7,15 +7,32 @@
     <title>Document</title>
   </head>
   <body>
-    <form method="get" action="http://search.naver.com/search.naver">
+    <form
+      method="get"
+      action="http://search.naver.com/search.naver"
+      autocomplete="off"
+    >
       <h2>네이버 검색</h2>
       <input name="query" />
       <input type="submit" />
     </form>
+
     <form method="get" action="http://www.google.com/search">
       <h2>구글 검색</h2>
       <input name="q" />
       <input type="submit" />
+      <input type="range" />
     </form>
+
+    <form action="">
+      <fieldset>
+        <legend>상품 선택</legend>
+      </fieldset>
+      <fieldset>
+        <legend>배송 정보</legend>
+      </fieldset>
+    </form>
+
+    <label>아이디(6자 이상) <input type="checkbox" /></label>
   </body>
 </html>
