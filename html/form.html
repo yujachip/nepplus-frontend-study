@@ -114,6 +114,28 @@
     <input type="time" />
     <input type="datetime-local" />
 
+    <h2>파일 넣기</h2>
     <input type="file" />
+    <br /><br />
+
+    <h2>textarea</h2>
+    <textarea cols="40" rows="4" name="a">기본값</textarea>
+
+    <h2>Select Option</h2>
+    <label for="prod1">상품 선택</label>
+    <select id="prod1">
+      <option value="special_3" selected>선물용 3kg</option>
+      <option value="special_5">선물용 3kg</option>
+      <option value="family_3">가정용 3kg</option>
+      <option value="family_5">가정용 3kg</option>
+    </select>
+
+    <h2>Datalist</h2>
+    <label for="prod2">포장 여부</label>
+    <input type="text" id="prod2" list="pack" />
+    <datalist id="pack">
+      <option value="package">선물 포장</option>
+      <option value="no_package">포장 안 함</option>
+    </datalist>
   </body>
 </html>
