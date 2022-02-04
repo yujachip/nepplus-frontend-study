@@ -60,7 +60,11 @@
           </li>
         </ul>
       </fieldset>
-      <input type="submit" />
+      <input type="submit" value="주문하기" />
+      <input type="reset" value="취소하기" />
+      <input type="button" value="공지 창 열기" />
+
+      <input type="hidden" name="이름" value="나는 안보여요" />
     </form>
 
     <label for="user-id">아이디(6자 이상) </label>
@@ -78,5 +82,38 @@
         <input type="submit" value="로그인" />
       </fieldset>
     </form>
+
+    <ul>
+      <li>
+        <label><input type="checkbox" value="s_3" />선물용 3kg</label>
+        <input type="number" min="0" max="5" step="2" />개 (최대 5개)
+      </li>
+      <li>
+        <label><input type="checkbox" value="s_5" />선물용 5kg</label>
+        <input type="number" min="0" max="3" value="1" />개 (최대 3개)
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <label><input type="checkbox" value="f_3" />가정용 3kg</label>
+        <input type="range" min="0" max="5" step="2" />개 (최대 5개)
+      </li>
+      <li>
+        <label><input type="checkbox" value="f_5" />가정용 5kg</label>
+        <input type="range" min="0" max="3" value="1" />개 (최대 3개)
+      </li>
+    </ul>
+
+    <h1>날짜 지정하기</h1>
+    <input type="date" min="2022-01-20" max="2022-02-14" />
+    <input type="month" />
+    <input type="week" />
+
+    <h1>시간 지정하기</h1>
+    <input type="time" />
+    <input type="datetime-local" />
+
+    <input type="file" />
   </body>
 </html>
