@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>하위 선택자</title>
+    <title>선택자</title>
     <style>
       body {
         background: #efefef;
@@ -18,14 +18,22 @@
         padding: 10px;
         background: #fff;
       }
-      section p {
+      /* section p {
         color: blue;
-      }
+      } */
       /* 자손선택자 */
-      section > p {
+      /* section > p {
         color: blue;
-      }
+      } */
       /* 자식선택자 */
+      h1 + p {
+        background: #222;
+        color: #fff;
+      }
+      li + li {
+        margin-top: 50px;
+      }
+      /* 1제외 2,3,4에만 적용 */
     </style>
   </head>
   <body>
@@ -42,5 +50,12 @@
         <!-- section에 바로 붙어있지 않는 p -->
       </div>
     </section>
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
   </body>
 </html>
