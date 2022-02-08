@@ -1,0 +1,38 @@
+body {
+  background: gray;
+}
+#signup {
+  width: 400px;
+  background: #fff;
+  padding: 15px;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+fieldset + fieldset {
+  margin-top: 30px;
+}
+
+.last-fieldset {
+  padding: 0;
+  text-align: center;
+}
+
+.last-fieldset input {
+  border-radius: 20%;
+  padding: 5px 20px;
+}
+
+#signup label {
+  float: left;
+  font-size: 13px;
+  width: 110px;
+}
+.input-wrapper {
+  margin-top: 20px;
+}
