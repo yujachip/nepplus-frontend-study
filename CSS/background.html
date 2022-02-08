@@ -9,7 +9,7 @@
       body {
         background-attachment: fixed;
         min-height: 100vh;
-        background-position: right bottom;
+        background-position: right top;
         background-repeat: no-repeat;
         background-image: url("https://t1.daumcdn.net/cfile/tistory/120DCA4A4F29073A1E");
       }
@@ -25,6 +25,33 @@
         padding-left: 50px;
         line-height: 40px;
       }
+      .box {
+        display: inline-block;
+        border: 1px solid;
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJLAqdsiBLviaGx863KrnbyPReFM9snlijvg&usqp=CAU")
+          no-repeat left top;
+      }
+      #bg1 {
+        background-size: auto;
+      }
+      #bg2 {
+        background-size: 200px;
+      }
+      #bg3 {
+        background-size: 50%;
+      }
+      #bg4 {
+        background-size: 100% 100%;
+      }
+      #bg5 {
+        background-size: contain;
+      }
+      #bg6 {
+        background-size: cover;
+      }
     </style>
   </head>
   <body>
@@ -35,5 +62,12 @@
       <li>자료실</li>
       <li>동영상강의</li>
     </ul>
+
+    <div class="box" id="bg1"></div>
+    <div class="box" id="bg2"></div>
+    <div class="box" id="bg3"></div>
+    <div class="box" id="bg4"></div>
+    <div class="box" id="bg5"></div>
+    <div class="box" id="bg6"></div>
   </body>
 </html>
