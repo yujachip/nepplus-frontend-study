@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>p.306 선형 그러데이션 만들기</title>
+    <style>
+      .grad {
+        width: 400px;
+        height: 300px;
+      }
+      #grad1 {
+        background: blue;
+        background: linear-gradient(to right bottom, blue, white);
+      }
+      #grad2 {
+        background: #f00;
+        background: linear-gradient(45deg, #f00, #fff);
+      }
+      #grad3 {
+        background: #06f;
+        background: linear-gradient(to bottom, #06f, white 30%, #06f);
+      }
+
+      #grad4 {
+        background: red;
+        background: radial-gradient(white, yellow, red);
+      }
+      #grad5 {
+        background: red;
+        background: radial-gradient(circle, white, yellow, red);
+      }
+      #grad6 {
+        width: 300px;
+        border-radius: 50%;
+        background: blue;
+        background: radial-gradient(circle at 20% 20%, white, blue);
+      }
+      #grad7 {
+        background: skyblue;
+        background: radial-gradient(yellow, white, orange);
+      }
+      #grad8 {
+        background: skyblue;
+        background: radial-gradient(yellow, white 10%, orange 60%);
+      }
+      #grad9 {
+        background: red;
+        background: repeating-linear-gradient(yellow, red 20px);
+      }
+      #grad10 {
+        background: #ccc;
+        background: repeating-radial-gradient(circle, white, #ccc 10%);
+      }
+      #grad11 {
+        background: red;
+        background: repeating-linear-gradient(
+          yellow,
+          yellow 20px,
+          red 20px,
+          red 40px
+        );
+      }
+      #grad12 {
+        background: #ccc;
+        background: repeating-radial-gradient(
+          circle,
+          white,
+          white 10%,
+          #ccc 10%,
+          #ccc 20%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grad" id="grad1">방향을 사용한 선형 그러데이션</div>
+    <div class="grad" id="grad2">각도를 사용한 선형 그러데이션</div>
+    <div class="grad" id="grad3">선형 그러데이션-색상 중지점 지정</div>
+    <div class="grad" id="grad4">타원형 그러데이션</div>
+    <div class="grad" id="grad5">원형 그러데이션</div>
+    <div class="grad" id="grad6">위치 키워드를 사용한 원형 그러데이션</div>
+    <div class="grad" id="grad7">원형 그러데이션-색상 중지점 지정</div>
+    <div class="grad" id="grad8">원형 그러데이션-색상 중지점 지정</div>
+    <div class="grad" id="grad9">선형 그러데이션 반복</div>
+    <div class="grad" id="grad10">원형 그러데이션 반복</div>
+    <div class="grad" id="grad11">선형 - 시작과 끝 색상 명확히 지정한 패턴</div>
+    <div class="grad" id="grad12">원형 - 시작과 끝 색상 명확히 지정한 패턴</div>
+  </body>
+</html>
