@@ -42,16 +42,54 @@
       .navi a:active {
         background-color: #f00;
       }
+      .clear {
+        clear: both;
+      }
+      .contents {
+          border: 1px solid;
+          border-radius: 4px;
+          padding: 20px;
+          margin-top: 40px;
+      }
+      .contents-wrapper {
+          width: 500px;
+          margin: 0 auto;
+      }
+
+      #intro:target {
+          background-color: #0069e0;
+          color: #fff;
+      }
+
+      #room:target {
+          background-color: #0069e0;
+          color: #fff;
+      }
     </style>
   </head>
   <body>
     <nav class="navi">
       <ul>
-        <li><a href="#">이용 안내</a></li>
-        <li><a href="#">객실 소개</a></li>
-        <li><a href="#">예약 방법 및 요금</a></li>
-        <li><a href="#">예약하기</a></li>
+        <li><a href="#intro">이용 안내</a></li>
+        <li><a href="#room">객실 소개</a></li>
+        <li><a href="#reservation">예약 방법 및 요금</a></li>
+        <li><a href="#./reservation.html">예약하기</a></li>
+        <div class="clear" >
       </ul>
     </nav>
+    <div class="contents-wrapper">
+    <div id="intro" class="contents">
+      <h2>이용 안내</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div id="room" class="contents">
+      <h2>객실 소개</h2>
+      <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+    <div id="reservation" class="contents">
+      <h2>예약 방법 및 요금</h2>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,</p>
+    </div>
+</div>
   </body>
 </html>
