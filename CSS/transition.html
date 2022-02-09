@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>p.367 트랜지션</title>
+    <title>p.372 트랜지션 속성 한번에 지정</title>
     <style>
       .box {
         border: 1px solid;
@@ -37,9 +37,24 @@
       #ease-in-out {
         transition-timing-function: ease-in-out;
       }
+
+      .box2 {
+        width: 100px;
+        height: 100px;
+        transition: 2s ease;
+        /* duration timing-function */
+        border: 1px solid;
+      }
+      .box2:hover {
+        width: 200px;
+        height: 200px;
+        background-color: #f50;
+        transform: rotate(270deg);
+      }
     </style>
   </head>
   <body>
+    <div class="box2"></div>
     <div class="box" id="ease"></div>
     <div class="box" id="linear"></div>
     <div class="box" id="ease-in"></div>
