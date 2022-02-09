@@ -6,12 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>p.353 quiz-1</title>
     <style>
+      #quiz1 {
+        perspective: 200px;
+      }
       #quiz1 img {
         width: 300px;
         height: 300px;
       }
       #quiz1 img:first-of-type {
         border: #f00 2px solid;
+        animation: rotate 3s;
+      }
+      @keyframes rotate {
+        to {
+          transform: rotateY(360deg);
+        }
       }
     </style>
   </head>
