@@ -11,19 +11,40 @@
         width: 100px;
         height: 100px;
         background: blue;
+        color: #fff;
+        margin: 20px;
         transition-property: width, height;
         /* 어떤 속성이 변화할건지 */
-        transition-duration: 2s, 1s;
+        transition-duration: 1s, 1s;
         /* 몇초동안 변할건지 */
       }
       .box:hover {
-        width: 200px;
-        height: 120px;
+        width: 400px;
+      }
+
+      #ease {
+        transition-timing-function: ease;
+      }
+      #linear {
+        transition-timing-function: linear;
+      }
+      #ease-in {
+        transition-timing-function: ease-in;
+      }
+      #ease-out {
+        transition-timing-function: ease-out;
+      }
+      #ease-in-out {
+        transition-timing-function: ease-in-out;
       }
     </style>
   </head>
   <body>
-    <div class="box"></div>
+    <div class="box" id="ease"></div>
+    <div class="box" id="linear"></div>
+    <div class="box" id="ease-in"></div>
+    <div class="box" id="ease-out"></div>
+    <div class="box" id="ease-in-out"></div>
   </body>
 </html>
 <!-- box가 hover될 때 바뀜 -->
