@@ -1,0 +1,52 @@
+.page-wrapper {
+  display: block;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+#header {
+  height: 60px;
+  align-items: center;
+  padding: 6px;
+}
+.topMenu-left {
+  float: left;
+}
+.topMenu-right {
+  float: right;
+}
+ul li {
+  display: inline-block;
+  padding: 5px;
+  margin: 0 5px;
+  color: black;
+}
+.login {
+  color: #fff;
+  background: #1a73e8;
+  line-height: 16px;
+  padding: 9px 23px;
+  border-radius: 4px;
+}
+a {
+  text-decoration: none;
+}
+
+#footer {
+  background-color: #f2f2f2;
+  color: #70757a;
+}
+.country {
+  padding: 15px 30px;
+  border-bottom: 1px solid #dadce0;
+  font-size: 15px;
+}
+.contents {
+  padding: 0 20px;
+  justify-content: space-between;
+}
+.bottomMenu-left {
+  float: left;
+}
+.bottomMenu-right {
+  float: right;
+}
