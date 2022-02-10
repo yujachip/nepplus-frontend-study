@@ -1,0 +1,27 @@
+table {
+  width: 600px;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  font-weight: bold;
+}
+
+th {
+  border: 1px solid;
+  padding: 10px;
+  background-color: lightgray;
+}
+
+td {
+  border: 1px solid #000;
+  padding-bottom: 60px;
+}
+td:nth-child(1):not(.gray) {
+  color: red;
+}
+td:nth-child(7):not(.gray) {
+  color: blue;
+}
+
+.gray {
+  color: lightgray;
+}
