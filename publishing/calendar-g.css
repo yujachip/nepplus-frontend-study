@@ -1,0 +1,30 @@
+#wrapper {
+  display: grid;
+  width: 600px;
+  border: 1px solid #000;
+
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 80px);
+}
+
+.box1,
+.box2 {
+  border: 1px solid #000;
+}
+
+.box1 {
+  background-color: green;
+  color: white;
+  text-align: center;
+}
+
+.box2:nth-child(7n):not(.gray) {
+  color: red;
+}
+.box2:nth-child(7n + 1):not(.gray) {
+  color: blue;
+}
+
+.gray {
+  color: lightgray;
+}
