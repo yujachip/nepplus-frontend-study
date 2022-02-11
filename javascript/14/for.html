@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문 for</title>
+  </head>
+  <body>
+    <script>
+      for (let i = 0; i < 5; i++) {
+        console.log("반복합니다");
+      }
+      // i가 5보다 작으면 console을 실행한다. 실행 되면 증가식이 실행된다.
+
+      //   i
+      //   0     console.log("반복합니다");
+      //   1     console.log("반복합니다");
+      //   2     console.log("반복합니다");
+      //   3     console.log("반복합니다");
+      //   4     console.log("반복합니다");
+      //   5
+
+      let sum = 0;
+      for (let i = 1; i < 6; i++) {
+        sum += i;
+      }
+      document.write("1부터 5까지 더하면 " + sum);
+    </script>
+  </body>
+</html>
