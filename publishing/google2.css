@@ -21,7 +21,7 @@ a:hover {
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /*브라우저 꽉차게*/
 }
 .page-wrapper #main {
   flex-grow: 1;
@@ -84,40 +84,144 @@ a:hover {
 }
 
 /* 메인 */
-#main .top {
+#main {
+  flex: 1 1 0;
+  /* flex: 1 */
+  /* flex-grow: 1;  flex-shrink: 1; flex-basis: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main .img-logo {
+  width: 272px;
+}
+#main .container {
+  width: 100%;
+  max-width: 584px;
+  padding: 20px;
+  text-align: center;
+}
+#main .container .search-container {
+  border: 1px solid #dfe1e5;
+  height: 44px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px 0 14px;
+  margin: 20px 0;
+  background: #fff;
+}
+#main .container .search-container:hover {
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223, 225, 229, 0);
+}
+#main .container .search-container .search-img {
+  width: 20px;
+  padding-right: 13px;
+}
+#main .container .search-container input {
+  border: none;
+  flex: 1;
+  outline: none;
+}
+#main .container .search-container .keyboard-img {
+  width: 24px;
+  padding: 0 8px;
+  cursor: pointer;
+}
+#main .container .search-container .mic-img {
+  width: 24px;
+  padding: 0 8px;
+  cursor: pointer;
+}
+#main .tooltip-wrapper {
+  position: relative;
+  display: flex;
+}
+#main .tooltip-wrapper:hover .tooltip {
+  display: block;
+}
+#main .tooltip {
+  display: none;
+  position: absolute;
+  background: #000;
+  color: #fff;
+  width: 60px;
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+  left: -15px;
+  bottom: -40px;
+}
+#main .tooltip::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #000;
+  position: absolute;
+  bottom: 21px;
+  left: 30px;
+  transform: rotate(45deg);
+}
+#main .container .button-container button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+#main .container .button-container button:hover {
+  box-shadow: 0 1px 1px rgb(0, 0, 0 / 10%);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
+}
+#main .container .service-info {
+  color: #3c4043;
+  font-size: small;
+  line-height: 28px;
+}
+#main .container .service-info a {
+  color: #1a0dab;
+}
+
+.tab-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.tab-list li {
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 560px;
 }
-
-#main .top .box {
+.tab-list li:hover {
+  background-color: rgb(229, 231, 232);
+}
+.tab-list .icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(241, 243, 244, 1);
   display: flex;
   align-items: center;
-  height: 44px;
-  background: #fff;
-  border: 1px solid #dfe1e5;
-  border-radius: 24px;
-  margin: 0 auto;
-  width: 638px;
-  max-width: 584px;
+  justify-content: center;
+  margin-top: 16px;
 }
-
-#main .top .box .search-img {
-  width: 20px;
-  height: 20px;
-  padding-right: 13px;
+.tab-list .img-icon {
+  width: 24px;
+  height: 24px;
 }
-#main .top .box #search {
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  padding: 0;
-  color: rgba(0, 0, 0, 0.87);
-  outline: none;
-  height: 39px;
-  font-size: 16px;
-  flex: 1;
+.tab-list .tab-name {
+  margin-top: 6px;
+  margin-bottom: 16px;
 }
 
 /* 푸터 */
