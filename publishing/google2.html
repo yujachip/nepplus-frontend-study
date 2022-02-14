@@ -32,19 +32,81 @@
       </header>
 
       <main id="main">
-        <section class="top">
-          <img
-            src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-          />
-          <form class="box">
+        <div class="container">
+          <form action="http://www.google.co.kr/search">
             <img
-              class="search-img"
-              src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png"
+              src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+              class="img-logo"
             />
-            <input type="text" id="search" />
+            <div class="search-container">
+              <img
+                src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png"
+                class="search-img"
+              />
+              <input name="q" type="text" />
+              <div class="tooltip-wrapper">
+                <img
+                  src="https://cdn0.iconfinder.com/data/icons/font-awesome-solid-vol-3/576/keyboard-256.png"
+                  class="keyboard-img"
+                />
+                <div class="tooltip">입력 도구</div>
+              </div>
+              <div class="tooltip-wrapper">
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-25-256.png"
+                  class="mic-img"
+                />
+                <div class="tooltip">음성 검색</div>
+              </div>
+            </div>
+            <div class="button-container">
+              <button class="btn-search">Google 검색</button>
+              <a href="https://www.google.com/doodles"
+                ><button type="button" class="btn-lucky">
+                  I'm Feeling Lucky
+                </button></a
+              >
+            </div>
+            <p class="service-info">
+              Google 제공 서비스: <a href="#">English</a>
+            </p>
+            <ul class="tab-list">
+              <a href="#">
+                <li>
+                  <div class="icon-wrapper">
+                    <img
+                      class="img-icon"
+                      src="https://i.pinimg.com/originals/fb/71/04/fb71048e03a5ada757f70d61b583d0bf.png"
+                    />
+                  </div>
+                  <span class="tab-name">Naver</span>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="icon-wrapper">
+                    <img
+                      class="img-icon"
+                      src="https://i.pinimg.com/originals/fb/71/04/fb71048e03a5ada757f70d61b583d0bf.png"
+                    />
+                  </div>
+                  <span class="tab-name">Naver</span>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="icon-wrapper">
+                    <img
+                      class="img-icon"
+                      src="https://i.pinimg.com/originals/fb/71/04/fb71048e03a5ada757f70d61b583d0bf.png"
+                    />
+                  </div>
+                  <span class="tab-name">Naver</span>
+                </li>
+              </a>
+            </ul>
           </form>
-        </section>
-        <section class="bottom"></section>
+        </div>
       </main>
 
       <footer id="footer">
