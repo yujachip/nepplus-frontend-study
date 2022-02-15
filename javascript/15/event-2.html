@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+    <style>
+      ul {
+        display: flex;
+      }
+      ul li {
+        list-style-type: none;
+        border: 1px dashed #ccc;
+        margin: 4px;
+        padding: 5px 0;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+        padding: 5px 50px;
+      }
+      #result {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        width: 500px;
+        height: 300px;
+        margin: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#" onclick="changeBg('green')">Green</a></li>
+      <li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+      <li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+    </ul>
+    <div id="result"></div>
+
+    <script>
+      function changeBg(color) {
+        const result = document.querySelector("#result");
+        result.style.backgroundColor = color;
+      }
+      //   하이픈(-) 쓸 수 없음
+    </script>
+  </body>
+</html>
