@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자판기</title>
+    <style>
+      #container {
+        border: 1px solid;
+        border-radius: 4px;
+        width: 400px;
+        height: 500px;
+        position: relative;
+        background-color: rgb(197, 197, 197);
+      }
+      .drink-list {
+        display: flex;
+        border: 1px solid;
+        border-radius: 4px;
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+        align-items: center;
+        background-color: #fff;
+      }
+      .drink {
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 5px;
+      }
+      .img {
+        width: 60px;
+        height: 60px;
+      }
+      .water,
+      .jetty,
+      .cola {
+        margin-left: 20px;
+      }
+      .coin-list {
+        display: flex;
+      }
+      .coin {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 10px;
+      }
+      .reset-coin {
+        position: absolute;
+        right: 20px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="drink-list">
+        <div class="water">
+          <img
+            src="https://www.highwayclub.co.kr/Data/Upload/Mall/202001/C6Q4JOFD47YB.jpg"
+            class="img"
+          />
+          <button class="drink" onclick="buy(500)">
+            물<br />
+            500원
+          </button>
+        </div>
+        <div class="jetty">
+          <img
+            src="http://images.coocha.co.kr//upload/2021/10/g9g9/23/thumb4_567571310.jpg"
+            class="img"
+          />
+          <button class="drink" onclick="buy(800)">제티<br />800원</button>
+        </div>
+        <div class="cola">
+          <img
+            src="https://item-shopping.c.yimg.jp/i/z/soukaidrink_4902102072625"
+            class="img"
+          />
+          <button class="drink" onclick="buy(2000)">콜라<br />2000원</button>
+        </div>
+      </div>
+      <div class="coin-list">
+        <button class="coin" onclick="insertCoin(100)">100원</button>
+        <button class="coin" onclick="insertCoin(500)">500원</button>
+        <button class="coin" onclick="insertCoin(1000)">1000원</button>
+        <button class="coin" onclick="insertCoin(5000)">5000원</button>
+      </div>
+      <button class="reset-coin" onclick="reset(0)">반환</button>
+      <p>현재금액 : <span id="total-money">0</span>원</p>
+    </div>
+
+    <script>
+      // 1. 버튼리스트 만들기
+      // 2. 버튼을 누르면 insertCoin 함수를 실행
+      // 3. 버튼마다 증가하는 돈이 다름
+
+      let totalMoney = 0;
+
+      const insertCoin = (money) => {
+        // 4. insertCoin 함수 : 매개변수만큼 totalMoney를 증가시키고
+        // 5. totalMoney를 console.log;
+        totalMoney += money;
+        document.querySelector("#total-money").innerHTML = totalMoney;
+      };
+
+      const buy = (money) => {
+        // 가격이 소지금액보다 크면 alert & 구매 불가
+        if (money <= totalMoney) {
+          // 4. money만큼 totalMoney를 감소시키고
+          // 5. totalMoney를 console.log;
+          totalMoney -= money;
+          document.querySelector("#total-money").innerHTML = totalMoney;
+        } else {
+          alert("잔액 부족! 구매 불가");
+        }
+      };
+
+      // 거스름돈 반환하면 소지금액 0원으로
+      const reset = (money) => {
+        totalMoney = money;
+        document.querySelector("#total-money").innerHTML = totalMoney;
+      };
+    </script>
+  </body>
+</html>
