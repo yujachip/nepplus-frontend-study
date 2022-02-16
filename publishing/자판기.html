@@ -90,6 +90,7 @@
       </div>
       <button class="reset-coin" onclick="reset(0)">반환</button>
       <p>현재금액 : <span id="total-money">0</span>원</p>
+      <p>메세지 : <span id="message"></p>
     </div>
 
     <script>
@@ -104,6 +105,7 @@
         // 5. totalMoney를 console.log;
         totalMoney += money;
         document.querySelector("#total-money").innerHTML = totalMoney;
+        document.querySelector("#message").innerHTML = `${money}원을 넣으셨습니다.`;;
       };
 
       const buy = (money) => {
@@ -112,7 +114,11 @@
           // 4. money만큼 totalMoney를 감소시키고
           // 5. totalMoney를 console.log;
           totalMoney -= money;
-          document.querySelector("#total-money").innerHTML = totalMoney;
+          document.querySelector(
+            "#total-money"
+          ).innerHTML = totalMoney;
+          document.querySelector("#message").innerHTML = `음료를 구매하였습니다. ${money}원`;;
+
         } else {
           alert("잔액 부족! 구매 불가");
         }
@@ -123,6 +129,26 @@
         totalMoney = money;
         document.querySelector("#total-money").innerHTML = totalMoney;
       };
+
+      // 한번에 하려면
+      // printTotalMoney(); 쓰고
+
+      // const returnChange = () => {
+      //   totalMoney = 0;
+      //   printTotalMoney();
+      // };
+
+      // const printTotalMoney = () => {
+      //   document.querySelector("#total-money").innerHTML = totalMoney;
+      // };
+
+      const printTotalMoney = () => {
+        document.querySelector("#total-money").innerHTML = totalMoney;
+      }
+      
+      const printMessage = (message) => {
+        document.querySelector("#message").innerHTML = message;
+      }
     </script>
   </body>
 </html>
