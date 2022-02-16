@@ -90,7 +90,7 @@
       </div>
       <button class="reset-coin" onclick="reset(0)">반환</button>
       <p>현재금액 : <span id="total-money">0</span>원</p>
-      <p>메세지 : <span id="message"></p>
+      <p>메시지 : <span id="message"></span></p>
     </div>
 
     <script>
@@ -104,8 +104,8 @@
         // 4. insertCoin 함수 : 매개변수만큼 totalMoney를 증가시키고
         // 5. totalMoney를 console.log;
         totalMoney += money;
-        document.querySelector("#total-money").innerHTML = totalMoney;
-        document.querySelector("#message").innerHTML = `${money}원을 넣으셨습니다.`;;
+        printTotalMoney();
+        printMessage(`${money}원을 넣으셨습니다.`);
       };
 
       const buy = (money) => {
@@ -114,11 +114,8 @@
           // 4. money만큼 totalMoney를 감소시키고
           // 5. totalMoney를 console.log;
           totalMoney -= money;
-          document.querySelector(
-            "#total-money"
-          ).innerHTML = totalMoney;
-          document.querySelector("#message").innerHTML = `음료를 구매하였습니다. ${money}원`;;
-
+          printTotalMoney();
+          printMessage(`음료를 구매하였습니다. ${money}원`);
         } else {
           alert("잔액 부족! 구매 불가");
         }
@@ -127,28 +124,25 @@
       // 거스름돈 반환하면 소지금액 0원으로
       const reset = (money) => {
         totalMoney = money;
-        document.querySelector("#total-money").innerHTML = totalMoney;
+        printTotalMoney();
+        printMessage(`반환하였습니다.`);
       };
 
       // 한번에 하려면
-      // printTotalMoney(); 쓰고
+      // printTotalMoney();
 
-      // const returnChange = () => {
-      //   totalMoney = 0;
-      //   printTotalMoney();
-      // };
-
-      // const printTotalMoney = () => {
-      //   document.querySelector("#total-money").innerHTML = totalMoney;
-      // };
+      const returnChange = () => {
+        totalMoney = 0;
+        printTotalMoney();
+      };
 
       const printTotalMoney = () => {
         document.querySelector("#total-money").innerHTML = totalMoney;
-      }
-      
+      };
+
       const printMessage = (message) => {
         document.querySelector("#message").innerHTML = message;
-      }
+      };
     </script>
   </body>
 </html>
