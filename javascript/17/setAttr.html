@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .img-thumbnail {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="prod-pic">
+      <img
+        src="https://ww.namu.la/s/b39cd616b1d08bd30a1c70a540f5be19bd03c64df162d0e6030ec9611196a1b3afff3af84e1d56c65ff7ad6a686578a893aedb785886957028b63d16b1dcc9fdb752e37475c46b81f4d55dbad177e32daeb9494c53e09cd1e50dde8df8665b4b"
+        alt="에디오피아 게뎁"
+        id="cup"
+        width="200"
+        height="200"
+      />
+    </div>
+    <div class="thumbnail-list">
+      <img
+        class="img-thumbnail"
+        src="https://segye.com/content/image/2021/05/04/20210504513983.jpg"
+      />
+      <img
+        class="img-thumbnail"
+        src="http://image.ajunews.com//content/image/2020/08/24/20200824154530850351.jpg"
+      />
+      <img
+        class="img-thumbnail"
+        src="https://www.sisajournal.com/news/photo/202105/217436_125403_558.jpg"
+      />
+    </div>
+    <script>
+      const thumbnailList = document.querySelectorAll(".img-thumbnail");
+      for (let i = 0; i < thumbnailList.length; i++) {
+        thumbnailList[i].onclick = changePic;
+      }
+      function changePic() {
+        const cup = document.querySelector("#cup");
+        const newPic = this.src;
+        cup.setAttribute("src", newPic);
+      }
+
+      const cup = document.querySelector("#cup");
+      cup.onclick = function () {
+        alert("이미지를 클릭했습니다.");
+      };
+    </script>
+  </body>
+</html>
