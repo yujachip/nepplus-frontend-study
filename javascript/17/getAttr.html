@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="prod-pic">
+      <img
+        src="https://img.kr.news.samsung.com/kr/wp-content/uploads/2015/04/%ED%88%AC%EB%AA%A8%EB%A1%9C%EC%9A%B0%ED%81%B4%EB%A6%AC%EB%8B%8923%ED%8E%B811.jpg"
+        alt="에디오피아 게뎁"
+        id="cup"
+        width="200"
+        height="200"
+        onclick="displaySrc()"
+      />
+    </div>
+
+    <script>
+      function displaySrc() {
+        const cup = document.querySelector("#cup");
+        alert("이미지 소스: " + cup.getAttribute("src"));
+      }
+    </script>
+  </body>
+</html>
