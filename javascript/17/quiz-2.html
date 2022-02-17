@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quiz 2. 행과 열의 개수에 따라 표 그리기</title>
+    <style>
+      #table tr td {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="row" />행 <input type="text" id="column" />열
+    <button onclick="createTable()">작성</button>
+    <table id="table"></table>
+
+    <script>
+      // step1 : 버튼 누르면 input 두개에 있는 값 console에 찍어보기
+      function createTable() {
+        const row = document.querySelector("#row").value;
+        console.log(row);
+        const column = document.querySelector("#column").value;
+        console.log(column);
+
+        // step2 : tr태그를 만들어서 table 태그에 붙이기 를 row번 수행
+        for (let i = 1; i <= row; i++) {
+          const table = document.querySelector("#table");
+          const tr = document.createElement("tr");
+
+          for (let j = 1; j <= column; j++) {
+            const td = document.createElement("td");
+            td.innerText = `${i}, ${j}`;
+            tr.appendChild(td);
+          }
+
+          table.appendChild(tr);
+        }
+      }
+
+      //1. 작성버튼 누르면 : eventListener
+      //2. 첫번째 인풋 value(row), 두번쨰 인풋 value(column) 추출 : querySelector or getElementById
+      //3. table 태그 안에 row개만큼 <tr> 생성 : for문
+      //4. 3번의 <tr>안에 column개 만큼 <td> 생성 : 중첩 for문
+      //5. td태그 안에 현재 row, column 값 출력 : innerText
+    </script>
+  </body>
+</html>
